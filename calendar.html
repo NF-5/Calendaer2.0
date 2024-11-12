@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+        <!--sets the character encoding to UTF-8 -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+        <!-- Links both the Javascript and CSS files to the HTML document -->
+		<script src="calendarfunctionality.js" defer></script>
+		<link rel="stylesheet" href="calendardesign.css">	
+
+        <!--Displays a title for the web page in the browser tab-->
+        <title>Day 2 Day Calandar</title>
+	
+    </head>
+	
+	
+	<body>
+       
+        <header>
+            <!-- States the month and year at the top of the web page-->
+            <h1 id="year"></h1>
+            <h1 id="monthYear"></h1>
+
+            <!-- Navigation menu, buttons allow the user to change the selected month, as well as the view being displayed to the user -->
+            <nav class="calendar-func">
+                <button id="previousMonth">^</button>
+                <button id="upcomingMonth">⌄</button>
+                <button id="day">Day</button>
+                <button id="week">Week</button>
+                <button id="month">Month</button>
+            </nav>
+
+        </header>
+
+		<!--table to create the outline for the calendar-->
+		<table id="calendar">
+			
+            <!--Constant table header throughout all displays, shows the user the days of the week-->
+			<thead>
+				<tr>
+					<th>Sunday</th>
+					<th>Monday</th>
+					<th>Tuesday</th>
+					<th>Wednesday</th>
+					<th>Thursday</th>
+					<th>Friday</th>
+					<th>Saturday</th>
+				</tr>
+			</thead>
+			
+            <!--Body of the table, creates the remainder of the calander, ie states all the dates and events-->
+			<tbody>
+				<!--This part of the table is generated using Javascript, it includes all the months of the year, as well as incorporates a leap year if applicable-->
+			</tbody>
+    	
+        </table>
+
+        <!--All the id's and labels for the buttons and options that are presented to the user in the event modal window-->
+        <div id="eventModal" style="display: none;">
+            <div>
+                <label for="eventTitle">Event Title:</label>
+                <input type="text" id="eventTitle" />
+                <input type="time" id="time"/><br><br>
+                <label for="eventColor">Choose event color:</label>
+                <select id="eventColor">
+                    <option value="red">Red</option>
+                    <option value="orange">Orange</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="purple">Purple</option>
+                </select><br><br>
+                <label for="eventDescription">Event Description:</label>
+                <textarea id="eventDescription"></textarea>
+                <button id="saveEvent">Save Event</button>
+                <button id="deleteEvent" style="display:none;">Delete Event</button>
+                <button id="closeModal">Close</button>
+            </div>
+        </div>
+	
+    </body>
+    
+</html>
